@@ -18,16 +18,44 @@ public class NumArrayList<T> implements NumList<T>
         // initialise instance variables
         x = 0;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public int size(){
+        return 0;
+    }
+    
+    public int capacity(){
+        return 0;
+    }
+    
+    public void add(double value){
+    
+    }
+    
+    public void insert(int i, double value){
+    
+    }
+    
+    public void remove(int i){
+    
+    }
+    
+    public boolean contains(double value){
+        return false;
+    }
+    
+    public double lookup(int i){
+        return 0;
+    }
+    
+    public boolean equals(NumList otherList){
+        return false;
+    }
+    
+    public void removeDuplicates(){
+    
+    }
+    
+    public String toString(){
+        return null;
     }
 }
