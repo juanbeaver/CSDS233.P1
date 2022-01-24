@@ -1,9 +1,5 @@
-
-
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 /**
  * The test class numArrayListTest.
@@ -18,25 +14,47 @@ public class numArrayListTest
      */
     public numArrayListTest()
     {
+        NumArrayList test = new NumArrayList();
+        
     }
+    
+    @Test
+    public void testSize(){
+        NumArrayList testList = new NumArrayList(5);
+        
+        NumArrayList testList2 = new NumArrayList(0);
+        
+        NumArrayList testList3 = new NumArrayList(1);
+        
+        NumArrayList testList4 = new NumArrayList();
+        
+        assertEquals(true, true);
+    }
+    
+    @Test 
+    public void testCapacity(){}
+    
+    @Test
+    public void testAdd(){}
 
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @BeforeEach
-    public void setUp()
-    {
-    }
+    @Test
+    public void testInsert(){}
+    
+    @Test 
+    public void testRemove(){}
+    
+    @Test
+    public void testContains(){}
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @AfterEach
-    public void tearDown()
-    {
-    }
+    @Test
+    public void testLookup(){}
+    
+    @Test
+    public void testEquals(){}
+    
+    @Test
+    public void testRemoveDuplicates(){}
+    
+    @Test
+    public void testToString(){}
 }

@@ -1,4 +1,4 @@
-# P1 Progress Log
+# P1 Design and Progress Log
 
 ---
 
@@ -12,6 +12,6 @@
 
 Time Spent: ~40min
 
-## Jan. 19, 2022,
+## Jan 24, 2022, 12:30 PM
 
-
+@
