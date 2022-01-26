@@ -21,4 +21,8 @@ Time Spent: \~40min
 
 Time spent: \~50min
 
-##
+## Jan. 26, 2022, 12:40 PM
+
+* Wrote JUnit tests for add(), insert() and toString() methods
+
+Time spent: \~ 20 min
