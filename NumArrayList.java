@@ -8,6 +8,7 @@
 public class NumArrayList<T> implements NumList<T>
 {
     // instance variables - replace the example below with your own
+    //commit test
     double[] list;    
     int elementCount = 0;
 
