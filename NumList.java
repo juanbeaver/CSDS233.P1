@@ -5,7 +5,7 @@
  * @author (Juan C Beaver)
  * @version (01/19/2022)
  */
-public interface NumList<T>
+public interface NumList
 {
     /**
      * Method size

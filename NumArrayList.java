@@ -5,7 +5,7 @@
  * @author (Juan C Beaver)
  * @version (01/19/2022)
  */
-public class NumArrayList<T> implements NumList<T>
+public class NumArrayList implements NumList
 {
     // instance variables - replace the example below with your own
     //commit test
