@@ -23,15 +23,19 @@ public class NumArrayListTest
         testList.add(1);
         testList.add(2);
         assertEquals(2, testList.size());
+        assertEquals(5, testList.capacity());
         
         NumArrayList testList2 = new NumArrayList(0);
         assertEquals(0,testList2.size());
+        assertEquals(0, testList2.capacity());
         
         NumArrayList testList3 = new NumArrayList(1);
-        assertEquals(1, testList3.size());
+        assertEquals(0, testList3.size());
+        assertEquals(1, testList3.capacity());
         
         NumArrayList testList4 = new NumArrayList();
         assertEquals(0,testList4.size());
+        assertEquals(0, testList4.capacity());
     }
     
     @Test
@@ -149,7 +153,7 @@ public class NumArrayListTest
         NumArrayList testList = new NumArrayList(5);
         testList.add(1);    testList.add(2);    testList.add(3);    testList.add(4);    testList.add(5);
 
-        assertEquals(0.0, testList.lookup(0), 0);
+        assertEquals(1.0, testList.lookup(0), 0);
 
         //Test the lookup of an element in the end of the list
         assertEquals( 5.0, testList.lookup(4), 0);
@@ -161,7 +165,10 @@ public class NumArrayListTest
         NumArrayList testList2 = new NumArrayList(2);
         testList2.add(1);
         testList2.add(2);
-        //assertThrows()
+
+        assertThrows(ArrayIndexOutOfBoundsException.class, () ->{
+            testList2.lookup(7);
+        });
     }
     
     @Test
