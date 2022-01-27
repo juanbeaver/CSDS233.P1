@@ -8,8 +8,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class NumArrayList implements NumList
 {
-    // instance variables - replace the example below with your own
-    //commit test
+    // instance variables
     private double[] list;
     private int elementCount = 0;
 
@@ -63,12 +62,15 @@ public class NumArrayList implements NumList
         list = new double[size];
     }
     
-    //Helper method to check if the array currently has the capacity to add n elements
-    // if it does not, the array size is doubled 
+    /*
+    * Helper method to check if the array currently has the capacity to add n elements
+    */
     public boolean canAdd(int amount){
         return list.length - elementCount > amount;
     }
 
+    /*Method to double the capacity of an already initiated array or set the initial
+    * array size to 10 */
     public void increaseCapacity(){
         if(list.length > 0) {
             double[] newList = new double[list.length * 2];
@@ -84,15 +86,17 @@ public class NumArrayList implements NumList
 
 
 
-    
+    //Returns the size of the list
     public int size(){
         return elementCount;
     }
-    
+
+    //Returns the capacity of the list
     public int capacity(){
         return list.length;
     }
-    
+
+    // adds a new element to the end of the current list
     public void add(double value){
         if (!canAdd(1)) {
             increaseCapacity();
@@ -100,7 +104,9 @@ public class NumArrayList implements NumList
         list[elementCount] = value;
         elementCount++;
     }
-    
+
+    /*inserts a new element before the i-th element of the list
+    (using 0 for the index of the first element). */
     public void insert(int i, double value){
         if(elementCount <= i){
             if(!canAdd(1)){
@@ -120,7 +126,8 @@ public class NumArrayList implements NumList
 
         }
     }
-    
+
+    //Removes the i-th element of the list.
     public void remove(int i){
         if(list.length > 0) {
             if (i < elementCount - 1) {
@@ -135,7 +142,8 @@ public class NumArrayList implements NumList
             }
         }
     }
-    
+
+    //Returns true if the list contains value.
     public boolean contains(double value){
         for (int i = 0; i < elementCount; i++) {
             if(list[i] == value){
@@ -144,7 +152,8 @@ public class NumArrayList implements NumList
         }
         return false;
     }
-    
+
+    //Returns the element at the i-th index.
     public double lookup(int i){
         try{
             return list[i];
@@ -170,7 +179,8 @@ public class NumArrayList implements NumList
         }
 
     }
-    
+
+    //Removes any duplicate doubles while keeping its original order.
     public void removeDuplicates(){
         //copy all numbers to new list and if newList contains i, skip.
         NumArrayList newList = new NumArrayList(size());
@@ -190,7 +200,8 @@ public class NumArrayList implements NumList
         list = newListArray;
         elementCount = newList.size();
     }
-    
+
+    // Returns a string representation of the list
     public String toString(){
         StringBuilder s2 = new StringBuilder();
         for(int i = 0; i < elementCount; i++){
