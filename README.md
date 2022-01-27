@@ -62,3 +62,8 @@ Time spent: \~1 hour (50% - 70% mark)
 * Finished the equals() method. I identified two lists equal to each other if they had the same sequence of numbers and the same amount of elements, capacities were not considered.
 
 Time spent: \~30 min (90% completed)
+
+* Finished the removeDuplicates() method. I had a lot of issues with ArrayOutOfBoundsException, but I was able to track it down to a for loop that had a condition that was decreasing as the for loop when on, causing it to end just short of the proper answer.
+* Finished the main method demonstration.&#x20;
+
+Time spent: \~30 min (100% completed).
