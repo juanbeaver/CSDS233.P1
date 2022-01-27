@@ -43,4 +43,22 @@ Time spent: \~ 30 min &#x20;
   * insert() is now passing my JUnit tests.
 * Wrote the remove() method. Did not run into any major issues while implementing my idea. It is currently passing my JUnit tests.
 * Wrote the contains() method with a for loop search. It passes my JUnit testing.
-*
+
+Time spent: \~1 hour (50% - 70% mark)
+
+## Jan. 27, 2022, 2:00 PM
+
+### Goals:
+
+* FInish lookup(), equals() for 90%
+* finish removeDuplicates() and write main method demonstration for 100%/Final
+  * The main method in the last progress update was not 100% finished.
+* Add comments where needed.
+
+### Progress:
+
+* Finished the lookup() method by using a try catch block. Returning list\[i] and throwing a ArrayOutOfBoundsException.
+  * I had a little bit of trouble writing the test case for making sure that the exception was being raised but eventually found assertThrows().
+* Finished the equals() method. I identified two lists equal to each other if they had the same sequence of numbers and the same amount of elements, capacities were not considered.
+
+Time spent: \~30 min (90% completed)
