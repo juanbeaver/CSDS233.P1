@@ -195,8 +195,18 @@ public class NumArrayListTest
     @Test
     public void testRemoveDuplicates(){
         //Test the removal of many of the same number
+        NumArrayList testList = new NumArrayList(5);
+        testList.add(1);    testList.add(1);    testList.add(1);    testList.add(1);    testList.add(1);
+
+        testList.removeDuplicates();
+        assertEquals("1.0", testList.toString());
 
         //Test the removal of many unique numbers
+        NumArrayList testList2 = new NumArrayList(8);
+        testList2.add(1);   testList2.add(2);   testList2.add(1);   testList2.add(2);   testList2.add(3);   testList2.add(4);   testList2.add(3);
+
+        testList2.removeDuplicates();
+        assertEquals("1.0 2.0 3.0 4.0", testList2.toString());
 
         //Test the removal of duplicates in the end of the list
 
