@@ -29,17 +29,19 @@ public class NumArrayList implements NumList
     //Helper method to check if the array currently has the capacity to add n elements
     // if it does not, the array size is doubled 
     public boolean canAdd(int amount){
-        if(list.length - elementCount > amount){
-            return true;
-        }else{
-            double[] newList = new double[list.length + 10];
-            for(int i = 0; i <= list.length + 1; i++){
-                newList[i] = list[i];
-            }
-            list = newList;
-            return false;
-        }
+        return list.length - elementCount > amount;
     }
+
+    public void increaseCapacity(){
+        double[] newList = new double[list.length + 10];
+        for(int i = 0; i <= list.length - 1; i++){
+            newList[i] = list[i];
+        }
+        list = newList;
+    }
+
+
+
     
     public int size(){
         return elementCount;
@@ -50,13 +52,11 @@ public class NumArrayList implements NumList
     }
     
     public void add(double value){
-        if(canAdd(1)){
-            list[elementCount+2] = value;
-            elementCount++;
-        }else{
-            list[elementCount+2] = value;
-            elementCount++;
+        if (!canAdd(1)) {
+            increaseCapacity();
         }
+        list[elementCount+2] = value;
+        elementCount++;
     }
     
     public void insert(int i, double value){
@@ -91,6 +91,9 @@ public class NumArrayList implements NumList
     }
     
     public void removeDuplicates(){
+        //copy all numbers to new list and if newList contains i, skip.
+        double[] newList = new double[elementCount + 5];
+
     
     }
     
