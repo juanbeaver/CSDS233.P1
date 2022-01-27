@@ -9,8 +9,15 @@ public class NumArrayList implements NumList
 {
     // instance variables - replace the example below with your own
     //commit test
-    double[] list;    
-    int elementCount = 0;
+    private double[] list;
+    private int elementCount = 0;
+
+    public static void main(String[] args) {
+        NumArrayList test = new NumArrayList(5);
+        test.add(1);    test.add(2);    test.add(3);    test.add(4);    test.add(5);    test.add(6);
+
+        System.out.println(test);
+    }
 
     /**
      * Constructor for objects of class NumArrayList
@@ -33,11 +40,16 @@ public class NumArrayList implements NumList
     }
 
     public void increaseCapacity(){
-        double[] newList = new double[list.length + 10];
-        for(int i = 0; i <= list.length - 1; i++){
-            newList[i] = list[i];
+        if(list.length > 0) {
+            double[] newList = new double[list.length * 2];
+            for (int i = 0; i <= list.length - 1; i++) {
+                newList[i] = list[i];
+            }
+            list = newList;
         }
-        list = newList;
+        else{
+            list = new double[10];
+        }
     }
 
 
@@ -55,35 +67,56 @@ public class NumArrayList implements NumList
         if (!canAdd(1)) {
             increaseCapacity();
         }
-        list[elementCount+2] = value;
+        list[elementCount] = value;
         elementCount++;
     }
     
     public void insert(int i, double value){
         if(elementCount <= i){
-            if(canAdd(1)){
-                list[list.length+1] = value;
+            if(!canAdd(1)){
+                increaseCapacity();
             }
+            list[elementCount] = value;
+            elementCount++;
         }else{
-            double temp = list[i];
-            list[i] = value;
-            for(int j = i + 1; j <= elementCount + 1; j++){
-                list[j] = temp;
-                temp = list[j + 1];
+            if(!canAdd(1)) {
+                increaseCapacity();
             }
+            for (int j = elementCount; j > i; j--) {
+                list[j] = list[j - 1];
+            }
+            list[i] = value;
+            elementCount++;
+
         }
     }
     
     public void remove(int i){
-    
+        if(list.length > 0) {
+            if (i < elementCount - 1) {
+                for (int j = i; j < elementCount; j++) {
+                    list[j] = list[j + 1];
+                }
+                elementCount--;
+            }
+            else if(i == elementCount - 1){
+                list[i] = 0.0;
+                elementCount--;
+            }
+        }
     }
     
     public boolean contains(double value){
+        for (int i = 0; i < elementCount; i++) {
+            if(list[i] == value){
+                return true;
+            }
+        }
         return false;
     }
     
     public double lookup(int i){
-        return 0;
+
     }
     
     public boolean equals(NumList otherList){
@@ -98,6 +131,13 @@ public class NumArrayList implements NumList
     }
     
     public String toString(){
-        return null;
+        StringBuilder s2 = new StringBuilder();
+        for(int i = 0; i < elementCount; i++){
+            s2.append(list[i]);
+            if(i < elementCount - 1){
+                s2.append(" ");
+            }
+        }
+        return s2.toString();
     }
 }

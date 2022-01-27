@@ -133,13 +133,13 @@ public class NumArrayListTest
         assertTrue(testList.contains(1.0));
 
         //Tests if the given parameter os found when at the end of the list
-        assertTrue(testList.contains(4));
+        assertTrue(testList.contains(4.0));
 
         //Tests if the given parameter is found when in the middle of the list
-        assertTrue(testList.contains(2));
+        assertTrue(testList.contains(2.0));
 
         //Tests if the method handles not finding the given value in the list
-        assertFalse(testList.contains(5));
+        assertFalse(testList.contains(5.0));
 
     }
 
@@ -208,12 +208,30 @@ public class NumArrayListTest
         testList2.removeDuplicates();
         assertEquals("1.0 2.0 3.0 4.0", testList2.toString());
 
-        //Test the removal of duplicates in the end of the list
-
     }
     
     @Test
     public void testToString(){
+        //Test a list with many numbers
+        NumArrayList testList = new NumArrayList(5);
+        testList.add(1);    testList.add(2);    testList.add(3);    testList.add(4);    testList.add(5);
 
+        assertEquals("1.0 2.0 3.0 4.0 5.0", testList.toString());
+
+        //Test a list with no numbers added
+        NumArrayList testList2 = new NumArrayList(5);
+
+        assertEquals("", testList2.toString());
+
+        //Test a list with only one number added
+        NumArrayList testList3 = new NumArrayList(5);
+        testList3.add(1);
+
+        assertEquals("1.0", testList3.toString());
+
+        //Tests a list with a capacity of zero
+        NumArrayList testList4 = new NumArrayList();
+
+        assertEquals("", testList4.toString());
     }
 }

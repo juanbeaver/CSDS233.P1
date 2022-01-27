@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=NumArrayListTest
+comment0.text=\n\ The\ test\ class\ numArrayListTest.\n\n\ @author\ \ (Juan\ Beaver)\n\ @version\ (01/26/22)\n
+comment1.params=
+comment1.target=void\ testSizeAndCapacity()
+comment1.text=\n\ Default\ constructor\ for\ test\ class\ numArrayListTest\n
+comment2.params=
+comment2.target=void\ testAddAndToString()
+comment3.params=
+comment3.target=void\ testInsert()
+comment4.params=
+comment4.target=void\ testRemove()
+comment5.params=
+comment5.target=void\ testContains()
+comment6.params=
+comment6.target=void\ testLookup()
+comment7.params=
+comment7.target=void\ testEquals()
+comment8.params=
+comment8.target=void\ testRemoveDuplicates()
+comment9.params=
+comment9.target=void\ testToString()
+numComments=10
