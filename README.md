@@ -23,9 +23,17 @@ Time spent: \~50min
 
 ## Jan. 26, 2022, 12:40 PM
 
-* Finished writing JUnit test cases for all methods.&#x20;
+* Finished writing 50% of JUnit test cases for NumArrayList.
 
 Time spent: \~ 30 min
 
 ## Jan. 26, 2022, 2:00 PM
 
+* Completed the entirety of the JUnit test cases.
+* Wrote the "demonstration" main method.&#x20;
+
+Time spent: \~ 30 min &#x20;
+
+## Jan. 27, 2022, 12:00 PM
+
+*
