@@ -36,4 +36,11 @@ Time spent: \~ 30 min &#x20;
 
 ## Jan. 27, 2022, 12:00 PM
 
+* Fixed the add() method by making a couple of changes to my helper methods: canAdd() and increaseCapacity().
+  * canAdd() was simplified to just checking if there is enough space in the array to add n amount of elements.
+  * increaseCapacity() has been changed to double the capacity of the array if the current list has a size greater than 0. Else if the list has a capacity of 0, the capacity is only increased by an initial 10 spaces.
+* Wrote the insert() method. Ran into issues when I forgot to increment my element counter, which caused some loops to finish too early.&#x20;
+  * insert() is now passing my JUnit tests.
+* Wrote the remove() method. Did not run into any major issues while implementing my idea. It is currently passing my JUnit tests.
+* Wrote the contains() method with a for loop search. It passes my JUnit testing.
 *
